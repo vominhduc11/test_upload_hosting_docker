@@ -20,7 +20,7 @@ WORKDIR /app
 COPY --from=builder /app/target/*.jar api-service.jar
 
 # Mở cổng 80
-EXPOSE 80
+EXPOSE 8080
 
 # Lệnh khởi chạy ứng dụng
 ENTRYPOINT ["java", "-jar", "api-service.jar"]
